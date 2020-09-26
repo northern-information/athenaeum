@@ -4,7 +4,7 @@ A repository of study, spike, and sample scripts for [norns](https://monome.org/
 
 ## Scripts
 
-- **delay.lua** - explores the concept of MIDI delay. Control rate and decay level of MIDI notes and get visual feedback as notes are toggled on and off. Requires an outboard MIDI device, preferrably one capable of polyphony. Made as a research spike for a new [arcologies](https://github.com/tyleretters/arcologies) structure.
+- **delay.lua** - explores the concept of MIDI delay. Control rate and decay level of MIDI notes and get visual feedback as notes are toggled on and off. Requires an outboard MIDI device, preferably one capable of polyphony. Made as a research spike for a new [arcologies](https://github.com/tyleretters/arcologies) structure.
 
 ## Credits
 
