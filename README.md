@@ -1,4 +1,4 @@
-# nonrs Athenaeum
+# norns Athenaeum
 
 A repository of study, spike, and sample scripts for [norns](https://monome.org/docs/norns/). Each was created as a means to learn different techniques or technologies myself. I am sharing it in the event others find them inspiring or useful.
 
