@@ -183,7 +183,6 @@ end
 function draw_animations()
   for n, v in pairs(globals.animations) do
     if v.active then
-      print(v.current)
       if v.current <= 0 or v.current >= 360 then
         globals.animations[n] = {}
         globals.animations[n].active = false
