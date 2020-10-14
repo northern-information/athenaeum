@@ -5,7 +5,7 @@
 --    k2: reset    k3: reset
 --
 --
---  "splash study" @tyleretters
+--  "splash study"
 
 graphics, fn = {}, {}
 

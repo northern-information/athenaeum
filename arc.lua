@@ -5,7 +5,7 @@
 -- - variable min/max
 -- - variable sensitivity
 --
--- "arc study" @tyleretters
+-- "arc study"
 
 _arc = arc.connect()
 

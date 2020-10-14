@@ -5,7 +5,7 @@
 --    k2: play      k3: note
 --
 --
--- "delay study" @tyleretters
+-- "delay study"
 
 music_util = require("musicutil")
 device = midi.connect(1)
