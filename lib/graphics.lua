@@ -3,6 +3,20 @@
 
 graphics = {}
 
+function graphics.init()
+  screen.aa(0)
+  screen.font_face(0)
+  screen.font_size(8)
+end
+
+function graphics:setup()
+  screen.clear()
+end
+
+function graphics:teardown()
+  screen.update()
+end
+
 function graphics:mlrs(x1, y1, x2, y2, l)
   screen.level(l or 15)
   screen.move(x1, y1)
