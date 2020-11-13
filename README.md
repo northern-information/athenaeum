@@ -6,6 +6,8 @@ A repository of study, spike, and sample scripts for [norns](https://monome.org/
 
 - **arc.lua** - explores getting data from and updating the LEDs on an [arc](https://monome.org/docs/arc/). Handles linear "scaled rings", chunky "paginated rings", wrapping, "snap" LED aliasing, and encoder sensitivity. Additionally, arbitrary minimum and maximum values can be set for each encoder which will then scale out accordingly. Also, a utility function to map the current encoder value to a given segment.
 
+- **crow.lua** - test script to make sure crow and Just Friends are working. One test is for volts/slew, another is for envelopes, another is for JF. Essentially just the code from [here](https://github.com/monome/crow-studies) but recoded as a "homework assignment."
+
 - **delay.lua** - explores the concept of MIDI delay. Control rate and decay level of MIDI notes and get visual feedback as notes are toggled on and off. Requires an outboard MIDI device, preferably one capable of polyphony. Made as a research spike for a new [arcologies](https://github.com/tyleretters/arcologies) structure.
 
 - **enc_wait.lua** - watches the norns encoders but lets you know _when_ they're turning and _when they've stopped_ turning. This allows for more sophisticated user interactions. This technology is what the arcologies UI is based on.
