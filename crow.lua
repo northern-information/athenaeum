@@ -19,8 +19,9 @@ function init()
   }
 
   globals.mode_names[1] = "SLEW/VOLTS TEST"
-  globals.mode_names[2] = "ENVELOPE TEST"
-  globals.mode_names[3] = "II: JF TEST"
+  globals.mode_names[2] = "TRIGGER TEST"
+  globals.mode_names[3] = "ENVELOPE TEST"
+  globals.mode_names[4] = "II: JF TEST"
 
   music = {
     scale_notes = {},
@@ -53,13 +54,19 @@ function music_clock()
         crow.output[1].volts = globals.volts
         crow.output[1].slew = globals.slew
         globals.next_note = globals.generation + 15
-      elseif globals.mode == 2 then
+     elseif globals.mode == 2 then
         globals.current_note = get_random_note()
         crow.output[1].volts = (globals.current_note - 60) / 12
-        crow.output[2].action = "{ to(8, 1), to(0, 1) }"
+        crow.output[2].action = "{ to(5, 0), to(0, 0.1, 'now') }"
+        crow.output[2].execute()
+        globals.next_note = globals.generation + 60
+      elseif globals.mode == 3 then
+        globals.current_note = get_random_note()
+        crow.output[1].volts = (globals.current_note - 60) / 12
+        crow.output[2].action = "{ to(5, .5), to(0, .5) }"
         crow.output[2].execute()
         globals.next_note = globals.generation + 124
-      elseif globals.mode == 3 then
+      elseif globals.mode == 4 then
         globals.current_note = get_random_note()
         crow.ii.jf.play_note((globals.current_note - 60) / 12, 5)
         globals.next_note = globals.generation + 15
@@ -102,12 +109,17 @@ function redraw()
     graphics:text(25, 50, "VOLTS " .. globals.volts, 15)
     graphics:text(25, 60, "OUT 1 = V/OCT", 15)
   elseif globals.mode == 2 then
+    graphics:text_right(20, 40, "NOTE:", 15)
+    graphics:text(25, 40, music_util.note_num_to_name(tonumber(globals.current_note)), 15)
+    graphics:text(25, 50, "OUT 1 = V/OCT", 15)
+    graphics:text(25, 60, "OUT 2 = TRIGGER", 15)
+  elseif globals.mode == 3 then
     graphics:mls(0, 33, globals.next_note - globals.generation, 33, 15)
     graphics:text_right(20, 40, "NOTE:", 15)
     graphics:text(25, 40, music_util.note_num_to_name(tonumber(globals.current_note)), 15)
     graphics:text(25, 50, "OUT 1 = V/OCT", 15)
     graphics:text(25, 60, "OUT 2 = LEVEL", 15)
-  elseif globals.mode == 3 then
+  elseif globals.mode == 4 then
     graphics:text_right(20, 40, "NOTE:", 15)
     graphics:text(25, 40, music_util.note_num_to_name(tonumber(globals.current_note)), 15)
     graphics:text(25, 50, "I2C BUS", 15)
