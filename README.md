@@ -14,6 +14,8 @@ A repository of study, spike, and sample scripts for [norns](https://monome.org/
 
 - **graphics.lua** - the Northern Information graphics library. These seven abstractractions are used in all Northern Information projects.
 
+- **rotate.lua** - example of newly implemented `screen.rotate(r)` and `screen.translate(x, y)` functions.
+
 - **splash.lua** - the Northern Information splash screen. The `graphics:splash()` method is where most of the action happens. Conceptually, the "NI" logo is always there but it is randomly revealed, concealed, and then inverted. Note: frames are used for sequencing but drawing needs to happen from "back to front." The logic mashes these two concepts together while favoring brevity over clarity. For example, right at the start we see `local l = globals.frame >= 49 and 0 or 15`, this is because after 49 frames the splash screen inverts black for white and white for black.
 
 ## Credits
