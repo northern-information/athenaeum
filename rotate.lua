@@ -1,4 +1,4 @@
--- k2 = refresh
+-- rotate
 
 local degrees = 0
 
