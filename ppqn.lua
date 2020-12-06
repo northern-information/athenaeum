@@ -78,6 +78,7 @@ end
 function tracker_clock()
   while true do
     clock.sync(1 / ppqn)
+    -- timers count down
     micro_timer = cycle(micro_timer - 1, 1, ppqn)
     micro_half_timer = cycle(micro_half_timer - 1, 1, ppqn * 2)
     if playback then
