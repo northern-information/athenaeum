@@ -8,7 +8,6 @@
 -- "markov study"
 
 engine.name = "PolyPerc"
-music_util = require("musicutil")
 chain = {}
 
 -- build your chain here:
@@ -22,6 +21,7 @@ function my_chain()
     50,  -- probability of moving to the next link
     25   -- probability of moving to the previous link
          -- this algorithm assumes the three probability values add up to 100
+         -- a probability the first two probabilities can be zero, the third (previous) cannot
   })
   table.insert(chain, { "b", "a", "c", 493.88, 25, 50, 25 })
   table.insert(chain, { "c", "b", "d", 261.626, 25, 50, 25 })
