@@ -14,6 +14,8 @@ A repository of study, spike, and sample scripts for [norns](https://monome.org/
 
 - **graphics.lua** - the Northern Information graphics library. These seven abstractractions are used in all Northern Information projects.
 
+- **markov.lua** - simple markov chain implementation. supports any number of "links" and each link has a probability of repeating, advancing, and retreating.
+
 - **ppqn.lua** - reliably sync multiple entities with a single clock using [PPQN](https://en.wikipedia.org/wiki/Pulses_per_quarter_note).
 
 - **rotate.lua** - example of newly implemented `screen.rotate(degrees)` and `screen.translate(x, y)` functions.
